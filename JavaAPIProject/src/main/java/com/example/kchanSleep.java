@@ -32,25 +32,17 @@ public class kchanSleep {
         if (mentioned(event)) {
             wake();
 
-            new Thread(() -> {
-                try {
-                    File f;
-                    int num = (int) (Math.random() * 3) + 1;
-                    f = switch (num) {
-                        case 1 -> new File("C:/Users/Jaden/Downloads/girls/512x512/peace.png");
-                        case 2 -> new File("C:/Users/Jaden/Downloads/girls/512x512/greet.png");
-                        default -> new File("C:/Users/Jaden/Downloads/girls/512x512/peek.png");
-                    };
-                    event.getChannel().sendFiles(FileUpload.fromData(f)).queue();
-
-                } catch (Exception e) {
-                    event.getChannel().sendMessage("Ughhhhhh, I'm up").queue();
-                }
-            }).start();
+            File f;
+            int num = (int) (Math.random() * 3) + 1;
+            f = switch (num) {
+                case 1 -> new File("C:/Users/Jaden/Downloads/girls/512x512/peace.png");
+                case 2 -> new File("C:/Users/Jaden/Downloads/girls/512x512/greet.png");
+                default -> new File("C:/Users/Jaden/Downloads/girls/512x512/peek.png");
+                };
+            event.getChannel().sendFiles(FileUpload.fromData(f)).queue();
 
             return true;
         }
-
         return false;
     }
     
