@@ -35,9 +35,9 @@ public class kchanSleep {
             File f;
             int num = (int) (Math.random() * 3) + 1;
             f = switch (num) {
-                case 1 -> new File("C:/Users/Jaden/Downloads/girls/512x512/peace.png");
-                case 2 -> new File("C:/Users/Jaden/Downloads/girls/512x512/greet.png");
-                default -> new File("C:/Users/Jaden/Downloads/girls/512x512/peek.png");
+                case 1 -> new File("");
+                case 2 -> new File("");
+                default -> new File("");
                 };
             event.getChannel().sendFiles(FileUpload.fromData(f)).queue();
 

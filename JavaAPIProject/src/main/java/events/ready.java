@@ -1,6 +1,5 @@
 package events;
 
-
 import com.example.chatgpt;
 
 import net.dv8tion.jda.api.JDA;
